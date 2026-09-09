@@ -96,3 +96,4 @@ export const ModuleModal: React.FC<ModuleModalProps> = ({ data, onClose }) => {
     </div>
   );
 };
+

@@ -31,10 +31,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             </button>
 
             <a
-              href="#one-mission"
+              href="#/about-us"
               className="text-sm font-semibold text-[#131313] hover:text-[#022640] transition-colors py-1"
             >
               Who We Are
+            </a>
+
+            <a
+              href="#/contact"
+              className="text-sm font-semibold text-[#131313] hover:text-[#022640] transition-colors py-1"
+            >
+              Contact
             </a>
           </div>
 
@@ -49,7 +56,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
           {/* Center Logo */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
-            <a href="#" className="block focus:outline-none">
+            <a href="#/" className="block focus:outline-none">
               <img
                 src="https://makerspacemasters.com/images/common/mainLogo.svg"
                 alt="Makerspace Masters"
@@ -151,11 +158,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               })}
 
               <a
-                href="#one-mission"
+                href="#/about-us"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block p-4 rounded-2xl bg-gray-50 font-semibold text-base text-[#131313]"
               >
                 Who We Are
+              </a>
+
+              <a
+                href="#/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block p-4 rounded-2xl bg-gray-50 font-semibold text-base text-[#131313]"
+              >
+                Contact Us
               </a>
 
               <a
@@ -184,3 +199,4 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
     </>
   );
 };
+

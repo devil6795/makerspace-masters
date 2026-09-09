@@ -78,23 +78,38 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
             </h4>
             <ul className="space-y-2.5 text-sm text-gray-600">
               <li>
-                <a href="#" className="hover:text-[#022640] transition-colors">
+                <a href="#/" className="hover:text-[#022640] transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#one-mission" className="hover:text-[#022640] transition-colors">
+                <a href="#/about-us" className="hover:text-[#022640] transition-colors">
                   Who We Are
                 </a>
               </li>
               <li>
-                <a href="#modules" className="hover:text-[#022640] transition-colors">
-                  Innovation Modules
+                <a href="#/makerspace-masters" className="hover:text-[#022640] transition-colors">
+                  Makerspace Masters (Schools)
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-[#022640] transition-colors">
-                  FAQs &amp; Guidance
+                <a href="#/makerspace-masters-x" className="hover:text-[#022640] transition-colors">
+                  Masters X (Colleges)
+                </a>
+              </li>
+              <li>
+                <a href="#/makerspace-masters-arena" className="hover:text-[#022640] transition-colors">
+                  Masters + (Arena)
+                </a>
+              </li>
+              <li>
+                <a href="#/makerspace-Kaushal" className="hover:text-[#022640] transition-colors">
+                  Kaushal Bodh (CBSE)
+                </a>
+              </li>
+              <li>
+                <a href="#/contact" className="hover:text-[#022640] transition-colors">
+                  Contact Us
                 </a>
               </li>
             </ul>
@@ -216,3 +231,4 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
     </footer>
   );
 };
+

@@ -33,3 +33,4 @@ export const TopStrip: React.FC = () => {
     </div>
   );
 };
+

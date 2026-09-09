@@ -29,76 +29,76 @@ export const MEGA_MENU_DATA: MegaMenuItem[] = [
       {
         title: 'Makerspace Masters',
         subtitle: 'For Schools',
-        path: '#content1',
+        path: '#/makerspace-masters',
         cards: [
           {
             image: 'https://makerspacemasters.com/images/blog/MakerspaceMasters1.png',
             title: 'Why Makerspace Masters?',
             description: 'Applied learning, real impact',
-            path: '#content1',
+            path: '#/makerspace-masters#why-makerspace',
           },
           {
             image: 'https://makerspacemasters.com/images/blog/MakerspaceMasters2.png',
             title: 'Beyond the Classroom',
             description: 'Real tools, real skills, real impact',
-            path: '#content1',
+            path: '#/makerspace-masters#why-makerspace',
           },
         ],
       },
       {
         title: 'Masters X',
         subtitle: 'For Colleges & Institutions',
-        path: '#content2',
+        path: '#/makerspace-masters-x',
         cards: [
           {
             image: 'https://makerspacemasters.com/images/blog/mastersx.png',
             title: 'Future-Ready Labs for Colleges & Institutions',
             description: 'Turn academic learning into entrepreneurial action',
-            path: '#content2',
+            path: '#/makerspace-masters-x#why-masters-x',
           },
           {
             image: 'https://makerspacemasters.com/images/blog/mastersx2.png',
             title: 'Learning Beyond Labs',
             description: 'Turning academic insights into entrepreneurial impact',
-            path: '#content2',
+            path: '#/makerspace-masters-x#why-masters-x',
           },
         ],
       },
       {
         title: 'Masters +',
         subtitle: 'For Partners & Franchisees',
-        path: '#content3',
+        path: '#/makerspace-masters-arena',
         cards: [
           {
             image: 'https://makerspacemasters.com/images/blog/connect1.png',
             title: 'What Happens Inside',
             description: 'Step into the Arena and you’ll find sparks flying',
-            path: '#content3',
+            path: '#/makerspace-masters-arena#what-happens-inside',
           },
           {
             image: 'https://makerspacemasters.com/images/blog/connect2.png',
             title: 'We Manage. You Earn.',
             description: 'The foundation for scalable impact',
-            path: '#content3',
+            path: '#/makerspace-masters-arena#what-happens-inside',
           },
         ],
       },
       {
         title: 'Kaushal Bodh',
         subtitle: 'CBSE-Aligned Skill Learning',
-        path: '#features',
+        path: '#/makerspace-Kaushal',
         cards: [
           {
             image: 'https://makerspacemasters.com/images/kaushal/KaushalBodh01.png',
             title: 'Built for CBSE Mandate',
             description: 'End-to-End CBSE Skill Subject Execution.',
-            path: '#features',
+            path: '#/makerspace-Kaushal',
           },
           {
             image: 'https://makerspacemasters.com/images/kaushal/KaushalBodh02.png',
             title: 'From Classroom to Capability',
             description: 'Build. Document. Present. Real Projects.',
-            path: '#features',
+            path: '#/makerspace-Kaushal',
           },
         ],
       },
@@ -113,19 +113,19 @@ export const MEGA_MENU_DATA: MegaMenuItem[] = [
       {
         title: 'Master Connect',
         subtitle: 'Knowledge Hub',
-        path: '#features',
+        path: 'https://mastersconnect.ai',
         cards: [
           {
             image: 'https://makerspacemasters.com/images/index/mega-menu/img-school-kid.png',
             title: 'Centralized Knowledge Base',
             description: 'Access curriculum, projects, and resources instantly.',
-            path: '#features',
+            path: 'https://mastersconnect.ai',
           },
           {
             image: 'https://makerspacemasters.com/images/index/woodworks.jpg',
             title: 'Peer-to-Peer Collaboration',
             description: 'Share your best ideas and learn from the community.',
-            path: '#features',
+            path: 'https://mastersconnect.ai',
           },
         ],
       },
@@ -264,3 +264,4 @@ export const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose, onSelectLin
     </div>
   );
 };
+

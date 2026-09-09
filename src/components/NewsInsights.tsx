@@ -90,3 +90,4 @@ export const NewsInsights: React.FC = () => {
     </section>
   );
 };
+

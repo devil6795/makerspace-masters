@@ -196,13 +196,26 @@ export const OneMissionSection: React.FC<OneMissionSectionProps> = ({ onLearnMor
               ))}
             </div>
 
-            <div className="pt-4">
+            <div className="pt-4 flex flex-wrap gap-4 items-center">
               <button
                 onClick={onLearnMoreClick}
-                className="bg-[#131313] hover:bg-[#022640] text-white px-8 py-3.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-0.5"
+                className="bg-[#131313] hover:bg-[#022640] text-white px-8 py-3.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer"
               >
-                Learn More
+                Book Consultation
               </button>
+              <a
+                href={
+                  activeTab.id === 'schools'
+                    ? '#/makerspace-masters'
+                    : activeTab.id === 'colleges'
+                    ? '#/makerspace-masters-x'
+                    : '#/makerspace-masters-arena'
+                }
+                className="border border-[#131313]/20 hover:border-[#131313] hover:bg-black/5 text-[#131313] px-6 py-3.5 rounded-full font-semibold text-sm transition-all flex items-center gap-2 cursor-pointer"
+              >
+                <span>Explore Full Details</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
@@ -210,3 +223,4 @@ export const OneMissionSection: React.FC<OneMissionSectionProps> = ({ onLearnMor
     </section>
   );
 };
+

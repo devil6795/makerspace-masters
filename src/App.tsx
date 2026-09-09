@@ -1,71 +1,81 @@
 import { useState } from 'react';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { TopStrip } from './components/TopStrip';
 import { Navbar } from './components/Navbar';
-import { HeroSection } from './components/HeroSection';
-import { StatsSection } from './components/StatsSection';
-import { OneMissionSection } from './components/OneMissionSection';
-import { InnovationModules } from './components/InnovationModules';
-import { MastersConnect } from './components/MastersConnect';
-import { IndustrySoftware } from './components/IndustrySoftware';
-import { NewsInsights } from './components/NewsInsights';
-import { Testimonials } from './components/Testimonials';
-import { ClientMarquee } from './components/ClientMarquee';
-import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { BookingModal } from './components/BookingModal';
+import { ScrollToTop } from './components/ScrollToTop';
+
+// Pages
+import { HomePage } from './pages/HomePage';
+import { AboutUsPage } from './pages/AboutUsPage';
+import { MakerspaceMastersPage } from './pages/MakerspaceMastersPage';
+import { MastersXPage } from './pages/MastersXPage';
+import { ArenaPage } from './pages/ArenaPage';
+import { KaushalBodhPage } from './pages/KaushalBodhPage';
+import { ContactPage } from './pages/ContactPage';
 
 export function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FBFBFB] text-[#131313]">
-      {/* Top Banner Announcement */}
-      <TopStrip />
+    <HashRouter>
+      <ScrollToTop />
+      <div className="min-h-screen flex flex-col bg-[#FBFBFB] text-[#131313]">
+        {/* Top Banner Announcement */}
+        <TopStrip />
 
-      {/* Main Glassmorphic Navigation */}
-      <Navbar onOpenBookingModal={() => setIsBookingOpen(true)} />
+        {/* Main Glassmorphic Navigation */}
+        <Navbar onOpenBookingModal={() => setIsBookingOpen(true)} />
 
-      {/* Hero Video Carousel with Stacked Cards */}
-      <main className="flex-1">
-        <HeroSection />
+        {/* Dynamic Route Pages */}
+        <main className="flex-1">
+          <Routes>
+            <Route
+              path="/"
+              element={<HomePage onOpenBookingModal={() => setIsBookingOpen(true)} />}
+            />
+            <Route
+              path="/about-us"
+              element={<AboutUsPage onOpenBookingModal={() => setIsBookingOpen(true)} />}
+            />
+            <Route
+              path="/makerspace-masters"
+              element={
+                <MakerspaceMastersPage onOpenBookingModal={() => setIsBookingOpen(true)} />
+              }
+            />
+            <Route
+              path="/makerspace-masters-x"
+              element={<MastersXPage onOpenBookingModal={() => setIsBookingOpen(true)} />}
+            />
+            <Route
+              path="/makerspace-masters-arena"
+              element={<ArenaPage onOpenBookingModal={() => setIsBookingOpen(true)} />}
+            />
+            <Route
+              path="/makerspace-Kaushal"
+              element={
+                <KaushalBodhPage onOpenBookingModal={() => setIsBookingOpen(true)} />
+              }
+            />
+            <Route path="/contact" element={<ContactPage />} />
 
-        {/* Live Counters & Dynamic Grid Statements */}
-        <StatsSection />
+            {/* Fallback route */}
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
 
-        {/* 3-Way Mission Showcase */}
-        <OneMissionSection onLearnMoreClick={() => setIsBookingOpen(true)} />
+        {/* Footer & CTA */}
+        <Footer onOpenBookingModal={() => setIsBookingOpen(true)} />
 
-        {/* 18 Innovation Modules Showcase with Detail Popups */}
-        <InnovationModules />
-
-        {/* Platform Overview */}
-        <MastersConnect />
-
-        {/* Industry Software Badges */}
-        <IndustrySoftware />
-
-        {/* Blog & News Insights */}
-        <NewsInsights />
-
-        {/* Video Testimonials */}
-        <Testimonials />
-
-        {/* Partner School Logos Infinite Marquee */}
-        <ClientMarquee />
-
-        {/* Categorized FAQs Accordion */}
-        <FaqSection />
-      </main>
-
-      {/* Footer & CTA */}
-      <Footer onOpenBookingModal={() => setIsBookingOpen(true)} />
-
-      {/* 3-Step Interactive Booking Modal */}
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-      />
-    </div>
+        {/* 3-Step Interactive Booking Modal */}
+        <BookingModal
+          isOpen={isBookingOpen}
+          onClose={() => setIsBookingOpen(false)}
+        />
+      </div>
+    </HashRouter>
   );
 }
 
